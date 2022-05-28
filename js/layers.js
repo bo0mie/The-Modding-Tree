@@ -66,6 +66,7 @@ addLayer("r", {
 })
 
 
+
 addLayer("s", {
     name: "stone", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "S", // This appears on the layer's node. Default is the id with the first letter capitalized
@@ -84,9 +85,6 @@ addLayer("s", {
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
         return mult
-    },
-    effect() {
-        return player.rebirths.points.add(2)
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
         return new Decimal(1)
